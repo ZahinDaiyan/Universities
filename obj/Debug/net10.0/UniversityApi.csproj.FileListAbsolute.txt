@@ -147,3 +147,12 @@ D:\dev\Universities\obj\Debug\net10.0\refint\UniversityApi.dll
 D:\dev\Universities\obj\Debug\net10.0\UniversityApi.pdb
 D:\dev\Universities\obj\Debug\net10.0\UniversityApi.genruntimeconfig.cache
 D:\dev\Universities\obj\Debug\net10.0\ref\UniversityApi.dll
+D:\dev\Universities\bin\Debug\net10.0\BCrypt.Net-Next.dll
+D:\dev\Universities\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\dev\Universities\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\dev\Universities\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\dev\Universities\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\dev\Universities\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+D:\dev\Universities\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\dev\Universities\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\dev\Universities\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
