@@ -4,26 +4,31 @@ using UniversityApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Controllers
+// Add services
 builder.Services.AddControllers();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// DbContext
+// DbContext (SQLite)
 builder.Services.AddDbContext<AppDbContext>(options =>
 	options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+// Enable Swagger for all environments (good for local testing)
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
-}
+	c.SwaggerEndpoint("/swagger/v1/swagger.json", "University API V1");
+	c.RoutePrefix = "swagger"; // Swagger will be served at /swagger
+});
 
+// Default route
 app.MapGet("/", () => "Hello World!");
+
+// Map controllers
 app.MapControllers();
 
 app.Run();
