@@ -1,26 +1,27 @@
 using Microsoft.EntityFrameworkCore;
 using UniversityApi.Data;
-using UnversityApi.Services;
+using UniversityApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Controllers
+// Controllers
 builder.Services.AddControllers();
 
-// Swagger 
-builder.Services.AddEndPointApiExplorer();
+// Swagger
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // DbContext
-builder.Services.AppDbContext<AppDbContext> (options =>
-		options.UseSqlite(builder.Configuration.GetConnentionString("DefaultConnection"));
+builder.Services.AddDbContext<AppDbContext>(options =>
+	options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
-if ( app.Enviourment.IsDevlopment()){
+if (app.Environment.IsDevelopment())
+{
 	app.UseSwagger();
-	app.UserSwaggerUI();
-	}
+	app.UseSwaggerUI();
+}
 
 app.MapGet("/", () => "Hello World!");
 app.MapControllers();

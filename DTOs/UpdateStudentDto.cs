@@ -1,5 +1,6 @@
-namespace UniversityApi.DTOs
+namespace UniversityApi.DTOs;
 
-public class UpdateStudentDto{
-	public string Name {get; set;} = null!;
+public class UpdateStudentDto
+{
+	public string Name { get; set; } = null!;
 }

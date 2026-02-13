@@ -2,6 +2,6 @@ namespace UniversityApi.Models;
 
 public class University
 {
-	public int Id {get; set;}
-	public readonly string Name {get;set;}
+	public int Id { get; set; }
+	public string Name { get; set; } = null!;
 }

@@ -1,18 +1,21 @@
-using Microsoft.EntityFreameworkCore;
+using Microsoft.EntityFrameworkCore;
 using UniversityApi.Models;
 
 namespace UniversityApi.Data;
 
 public class AppDbContext : DbContext
 {
-	public AppDbContext ( DbContextOptions<AppDbContext> options) : base {options}
-
-	protcted override void OnModelCreating ( ModelBuilder mb )
+	public AppDbContext(DbContextOptions<AppDbContext> options)
+		: base(options)
 	{
-		base.OnModelCreating(mb);
 	}
 
-	DbSet<University> Universities {get;set;}
-	DbSet<Student> Students {get;set;}
-	DbSet<User> Users {get;set;}
+	protected override void OnModelCreating(ModelBuilder modelBuilder)
+	{
+		base.OnModelCreating(modelBuilder);
+	}
+
+	public DbSet<University> Universities { get; set; } = null!;
+	public DbSet<Student> Students { get; set; } = null!;
+	public DbSet<User> Users { get; set; } = null!;
 }

@@ -1,5 +1,8 @@
-namespace UniversityApil.DTOs;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
-public class UpdateUniversityDto{
-	public string Name {get;set;}
+namespace UniversityApi.DTOs;
+
+public class UpdateUniversityDto
+{
+	public string Name { get; set; } = null!;
 }

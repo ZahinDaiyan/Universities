@@ -1,7 +1,8 @@
-namespace UniversityDTOs;
+namespace UniversityApi.DTOs;
 
-public class StudentResponseDto{
-	public int Id {get;set;}
-	public string Name {get;set;} = null!;
-	public string UniversityId {get; set;} = null!;
+public class StudentResponseDto
+{
+	public int Id { get; set; }
+	public string Name { get; set; } = null!;
+	public int UniversityId { get; set; }
 }
